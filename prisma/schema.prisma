@@ -13,12 +13,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Task {
-id        Int @id @default(autoincrement())
-descricao String
-concluida Boolean @default(false)
+model dishe {
+  id        Int     @id @default(autoincrement()) @unique
+  name     String
+  description String 
+  price String 
+  category String
+  ingredients String
+  imageUrl String ?
+  prepTime String
+  updatedAdt DateTime @updatedAt
+  createdAt  DateTime @default(now())
 
-criadaEm DateTime @default(now())
-
-@@map("tasks")
+  @@map("dishes")
 }

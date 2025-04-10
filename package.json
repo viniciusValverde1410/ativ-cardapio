@@ -1,9 +1,9 @@
 {
-  "name": "teste",
+  "name": "ativ-cardapip",
   "version": "1.0.0",
   "description": "",
   "license": "MIT",
-  "author": "",
+  "author": "Vinicius Valverde",
   "type": "module",
   "main": "server.js",
   "scripts": {
@@ -11,9 +11,10 @@
     "dev": "nodemon src/server.js"
   },
   "dependencies": {
-    "@prisma/client": "^6.5.0",
+    "@prisma/client": "^6.6.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "prisma": "^6.6.0"
   }
 }
