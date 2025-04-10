@@ -144,6 +144,13 @@ curl -X DELETE http://localhost:3000/dishes/1
 - **dotenv**: ![dotenv](https://img.shields.io/badge/dotenv-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black) Gerenciamento de variáveis de ambiente.
 - **Postman**: ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=red) Ferramenta para testes de API.
 
+- **Git**: ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) Controle de versão do código fonte.
+
 ---
+
+## Contribua com o Projeto
+
+Se você gostou deste projeto, considere dar uma estrela no repositório! Isso ajuda a divulgar o projeto e motiva o desenvolvimento de novas funcionalidades. 🌟
+
 
 
