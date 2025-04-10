@@ -1,21 +1,25 @@
-import prisma from "../../prisma/client.js";
-class pratoModel {
-  getAll = async () => {
+import prisma from "../../prisma/client.js"; // Importando o cliente Prisma
+class pratoModel { // Definindo a classe pratoModel
+  // Método para obter todos os pratos
+  getAll = async () => { 
     return await prisma.dishe.findMany();
   }
 
+  // Método para obter um prato específico pelo ID
   getById = async (id) => {
     return await prisma.dishe.findMany({
       where: { id }
     })
   }
 
+  // Método para criar um novo prato
   create = async (name, description, price, category, ingredients, imageUrl, prepTime) => {
     return await prisma.dishe.create({
       data: { name, description, price, category, ingredients, imageUrl, prepTime },
     });
   };
 
+  // Método para atualizar um prato existente pelo ID
   update = async (id, name, description, price, category, ingredients, imageUrl, prepTime) => {
     try {
       const prato = await prisma.dishe.update({
@@ -30,7 +34,7 @@ class pratoModel {
     }
   };
 
-
+  // Método para deletar um prato existente pelo ID
   delete = async (id) => {
 
     try {

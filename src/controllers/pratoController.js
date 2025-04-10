@@ -1,6 +1,8 @@
-import pratoModel from '../models/pratoModel.js';
+import pratoModel from '../models/pratoModel.js'; 
 
-class pratoController {
+class pratoController { // Definindo a classe pratoController
+
+  // Método para obter todos os pratos
   getAll = async (req, res) => {
     try {
       const pratos = await pratoModel.getAll();
@@ -11,6 +13,7 @@ class pratoController {
     }
   };
 
+  // Método para obter um prato específico pelo ID
   getById = async (req, res) => {
     const { id } = req.params
 
@@ -27,6 +30,7 @@ class pratoController {
     }
   }
 
+  // Método para criar um novo prato
   create = async (req, res) => {
     const { name, description, price, category, ingredients, imageUrl, prepTime } = req.body;
     try {
@@ -52,6 +56,8 @@ class pratoController {
     }
   };
 
+
+  // Método para atualizar um prato existente pelo ID
   update = async (req, res) => {
     const { id } = req.params;
     const { name, description, price, category, ingredients, imageUrl, prepTime } = req.body;
@@ -74,6 +80,7 @@ class pratoController {
     }
   };
 
+  // Método para deletar um prato existente pelo ID
   delete = async (req, res) => {
     const { id } = req.params
 
