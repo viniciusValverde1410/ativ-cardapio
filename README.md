@@ -24,10 +24,10 @@ Este projeto é uma aplicação para gerenciamento de cardápio, permitindo a cr
 
     3.1 **Configure o Prisma**:  
         Instale e Inicialize o Prisma no projeto:  
-        ```bash
-        npm install prisma @prisma/client 
-        npx prisma init
-        ```  
+        
+        - npm install prisma @prisma/client 
+        - npx prisma init
+          
         Isso criará um diretório `prisma/` com os arquivos de configuração necessários.  
 
         Em seguida, configure o arquivo `prisma/schema.prisma` para definir o modelo do banco de dados. Por exemplo:  
@@ -74,7 +74,7 @@ Este projeto é uma aplicação para gerenciamento de cardápio, permitindo a cr
 
 4. **Execute o projeto**:
     ```bash
-    npm start
+    npm run dev
     ```
 
 5. Acesse a aplicação em: `http://localhost:{port}`.
