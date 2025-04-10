@@ -5,5 +5,6 @@ const router = express.Router();
 router.get("/", pratoController.getAll);
 router.get("/:id", pratoController.getById);
 router.post("/", pratoController.create);
+router.put("/:id", pratoController.update);
 
 export default router;

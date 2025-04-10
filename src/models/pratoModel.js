@@ -16,6 +16,21 @@ create = async (name, description, price, category, ingredients, imageUrl, prepT
   });
 };
 
+update = async (id, name, description, price, category, ingredients, imageUrl, prepTime) => {
+      try {
+        const prato = await prisma.dishe.update({
+          where: { id },
+          data: {name, category, description, price, ingredients, imageUrl, prepTime},
+        });
+
+        return prato;
+      } catch (error) {
+        console.error("Erro ao atualizar prato:", error);
+        throw error;
+      }
+};
+
+
 }
 
 export default new pratoModel();

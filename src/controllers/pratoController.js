@@ -52,6 +52,29 @@ class pratoController {
     }
   };
 
+  update = async (req, res) => {
+    const { id } = req.params;
+    const { name, description, price, category, ingredients, imageUrl, prepTime } = req.body;
+
+    try {
+      const pratoAtualizado = await pratoModel.update(
+        Number(id),
+        name, description, price, category, ingredients, imageUrl, prepTime
+      )
+
+      if (!pratoAtualizado) {
+        return res.status(404).json({ erro: "Prato não encontrado!" })
+      }
+
+      res.status(200).json(pratoAtualizado) + { message: "Prato atualizado com sucesso!" }
+
+    } catch (error) {
+      console.error(error)
+      res.status(500).json({ erro: "Não foi possível atualizar prato" })
+    }
+
+  } 
+
 }
 
 export default new pratoController();
