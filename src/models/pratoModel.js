@@ -39,7 +39,7 @@ class pratoModel {
       });
 
       return pratoDeletado
-      } catch (error) {
+    } catch (error) {
       console.log("Erro ao deletar prato!", error);
       throw error;
     }

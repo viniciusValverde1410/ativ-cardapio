@@ -72,7 +72,7 @@ class pratoController {
       console.error(error)
       res.status(500).json({ erro: "Não foi possível atualizar prato" })
     }
-}; 
+  };
 
   delete = async (req, res) => {
     const { id } = req.params
