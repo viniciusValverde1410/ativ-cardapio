@@ -72,8 +72,25 @@ class pratoController {
       console.error(error)
       res.status(500).json({ erro: "Não foi possível atualizar prato" })
     }
+}; 
 
-  } 
+  delete = async (req, res) => {
+    const { id } = req.params
+
+    try {
+      const deletado = await pratoModel.delete(Number(id))
+
+      if (!deletado) {
+        return res.status(404).json({ erro: "Prato não encontrado!" })
+      }
+
+      res.status(200).json({ message: "Prato deletado com sucesso!" })
+
+    } catch {
+      console.error(error)
+      res.status(500).json({ erro: "Não foi possível deletar prato" })
+    }
+  }
 
 }
 
